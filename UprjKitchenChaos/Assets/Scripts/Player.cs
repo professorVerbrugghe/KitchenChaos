@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+/// <summary>
+/// Player movement script
+/// </summary>
+
 public class Player : MonoBehaviour
     {
     [Tooltip("Multiplies with the transform.position to calculate the speed of the player. Normalized.")]
