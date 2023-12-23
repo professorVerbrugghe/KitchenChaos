@@ -26,5 +26,6 @@ public class GameInput : MonoBehaviour {
         //normalize vector
         inputVector = inputVector.normalized;
         return inputVector;
+
     }
 }
