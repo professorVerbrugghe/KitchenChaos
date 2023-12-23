@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     {
     [Tooltip("Multiplies with the transform.position to calculate the speed of the player. Normalized.")]
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float rotateSpeed;
 
     private void Update() {
 
@@ -40,5 +41,7 @@ public class Player : MonoBehaviour
         //apply vector to position
         transform.position += moveDir * Time.deltaTime * moveSpeed;
 
+        //rotation
+        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
     }
 }
